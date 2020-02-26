@@ -43,7 +43,7 @@ public class PaletteActivity extends AppCompatActivity {
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(!firstSelection) {   //Prevent onItemSelected() from running this code automatically (i.e. before the user chooses anything)
+                if (!firstSelection) {   //Prevent onItemSelected() from running this code automatically (i.e. before the user chooses anything)
                     Intent launchIntent = new Intent(PaletteActivity.this, CanvasActivity.class);
                     launchIntent.putExtra(INTENT_COLOR_KEY, parent.getItemAtPosition(position).toString());
                     startActivity(launchIntent);
